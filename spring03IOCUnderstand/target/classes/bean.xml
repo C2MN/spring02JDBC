@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--把对象的创建交给spring来管理
+        bean标签：用来配置并让spring创建对象，并且将创建的对象存入ioc容器中
+                 id属性用来指定对象的唯一标识符
+                 class属性用来指定要创建对象的全限定类名
+    -->
+    <!--配置service-->
+    <bean id="accountService" class="com.srx.service.impl.AccountServiceImpl"></bean>
+    <!--配置dao-->
+    <bean id="accountDao" class="com.srx.dao.impl.AccountDaoImpl"></bean>
+</beans>

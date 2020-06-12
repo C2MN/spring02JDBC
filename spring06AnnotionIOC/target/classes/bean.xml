@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--把对象的创建交给spring来管理
+    <bean id="accountService" class="com.srx.service.impl.AccountServiceImpl"></bean>
+    <bean id="accountDao" class="com.srx.dao.impl.AccountDaoImpl"></bean>-->
+
+    <!--使用context命名空间，通过Spring扫描指定包service及其子包所有Bean的实现类，进行注解解析-->
+    <context:component-scan base-package="com.srx.service"/>
+    <context:component-scan base-package="com.srx.dao"/>
+
+</beans>
